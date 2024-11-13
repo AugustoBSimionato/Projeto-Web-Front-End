@@ -40,13 +40,25 @@ nav {
   width: 100%;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(130, 130, 130, 0.1);
 }
 
 nav ul {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
   list-style-type: none;
+  padding: 0;
+}
+
+nav .logo {
+  margin-right: auto;
+}
+
+nav .logo img {
+  width: 50px;
+  height: auto;
+  border-radius: 0;
 }
 
 nav li {
@@ -66,12 +78,6 @@ nav a {
 nav a .material-symbols-outlined {
   margin-right: 0.5rem;
   font-size: 1.5rem;
-}
-
-nav img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
 }
 
 nav a:hover {

@@ -11,8 +11,9 @@
 <body>
     <nav>
         <ul>
-            <li><a href="/index.html"><span class="material-symbols-outlined">home</span>Home</a></li>
-            <li><a href="#"><span class="material-symbols-outlined">flag</span>Nosso propósito</a></li>
+          <li class="logo"><img src="/figs/watts.png" alt=""></li>
+          <li><a href="/index.html"><span class="material-symbols-outlined">home</span>Home</a></li>
+          <li><a href="#"><span class="material-symbols-outlined">flag</span>Nosso propósito</a></li>
         </ul>
     </nav>
 
@@ -26,10 +27,8 @@
                 <input type="email" id="email" name="email" placeholder="Email para receber os alertas" required>
             </div>
             <div class="form-group">
-                <input type="password" id="password" name="password" placeholder="Senha" required>
-            </div>
-            <div class="form-group">
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar senha" required>
+                <input type="number" id="password" name="password" placeholder="CEP" required>
+                <!--Mostrar mapa quando colocar um CEP e liberar botão ou mostrar ele se tudo estiver preenchido-->
             </div>
             <button type="submit" class="submit-btn">Registrar</button>
         </form>
