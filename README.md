@@ -8,3 +8,8 @@
 
 ## ODS Selecionado
 ODS 7 (Energia limpa e acessível) - 7.1 Até 2030, assegurar o acesso universal, confiável, moderno e a preços acessíveis a serviços de energia
+
+## Descrição do projeto
+- 
+
+## Estrutura do projeto
