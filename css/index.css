@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #0F0F0F;
+    --text-color: #ffffff;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+nav {
+  padding: 2rem;
+  background-color: rgba(var(--background-color), 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+  list-style-type: none;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+nav a .material-symbols-outlined {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+nav img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+nav a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Conteúdo principal */
+.hero {
+  height: 100vh;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.hero h1 {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.hero p {
+  color: #b2b2b2;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.about, .services, .contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+.about h2, .services h2, .contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+}
+
+.about p, .services ul, .contact p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #b2b2b2;
+}
+
+.services ul {
+  list-style-type: none;
+}
+
+.services li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: #161616;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+footer a {
+  color: #a4a4a4;
+}
+
+body.dark-mode {
+  --background-color: #0F0F0F;
+  --text-color: #ffffff;
+  --link-color: #8ab4f8;
+}
