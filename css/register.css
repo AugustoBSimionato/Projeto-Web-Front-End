@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
+  --footer-background: #f6f6f6;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #0F0F0F;
     --text-color: #ffffff;
+    --footer-background: #161616;
   }
 }
 
@@ -35,6 +39,15 @@ nav {
   top: 0;
   z-index: 100;
   border-bottom: 1px solid rgba(130, 130, 130, 0.1);
+  transition: padding 0.3s ease;
+}
+
+nav.scrolled, nav.scrolled span {
+  padding: 1rem;
+}
+
+nav.scrolled .nav-a {
+  display: flex;
 }
 
 nav ul {
@@ -67,6 +80,7 @@ nav a {
   border: none;
   cursor: pointer;
   font: inherit;
+  text-decoration: none;
 }
 
 nav a .material-symbols-outlined {
@@ -79,6 +93,27 @@ nav a:hover {
   transition: all 0.3s ease;
 }
 
+nav.scrolled .nav-a span {
+  display: inline;
+}
+
+nav.scrolled .nav-a span.material-symbols-outlined {
+  display: inline;
+}
+
+nav.scrolled .nav-a span:not(.material-symbols-outlined) {
+  display: none;
+}
+
+nav a span {
+  display: inline-block;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+nav.scrolled .nav-a span:not(.material-symbols-outlined) {
+  animation: fadeOut 0.3s ease forwards;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -88,32 +123,15 @@ nav a:hover {
 }
 
 .register-form {
+  border: 1px solid rgba(172, 172, 172, 0.2);
   background-color: var(--background-color);
   padding: 2.5rem;
   border-radius: 15px;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 40px rgba(62, 62, 62, 0.2);
   position: relative;
   animation: fadeIn 0.3s ease-in;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 480px) {
-  .register-form {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
 }
 
 .register-form h2 {
@@ -139,8 +157,7 @@ nav a:hover {
 
 .form-group input:focus {
   outline: none;
-  border-color: #ffffff;
-  box-shadow: 0 0 0 2px rgba(138, 180, 248, 0.2);
+  border-color: var(--text-color);
 }
 
 .submit-btn {
@@ -148,8 +165,8 @@ nav a:hover {
   padding: 0.75rem;
   border: 1px solid rgba(147, 147, 147, 0.2);
   border-radius: 8px;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--text-color);
+  color: var(--background-color);
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -160,8 +177,22 @@ nav a:hover {
   transform: translateY(-3px);
 }
 
+.info-message {
+  display: flex;
+  align-items: center;
+  color: gray;
+  font-size: 0.85rem;
+  padding-top: 1.5rem;
+}
+
+.info-message .material-symbols-outlined {
+  padding: 0px;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
 footer {
-  background-color: #161616;
+  background-color: var(--footer-background);
   padding: 1.5rem;
   text-align: center;
   font-size: 0.875rem;
@@ -169,11 +200,35 @@ footer {
 }
 
 footer a {
-  color: #a4a4a4;
+  font-weight: bold;
+  color: #595959;
 }
 
-body.dark-mode {
-  --background-color: #0f0f0f;
-  --text-color: #ffffff;
-  --link-color: #8ab4f8;
+@media (max-width: 480px) {
+  .register-form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateX(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateX(10px);
+  }
 }

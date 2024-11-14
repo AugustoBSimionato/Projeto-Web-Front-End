@@ -9,12 +9,14 @@
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
+  --footer-background: #f6f6f6;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #0F0F0F;
     --text-color: #ffffff;
+    --footer-background: #161616;
   }
 }
 
@@ -41,6 +43,14 @@ nav {
   top: 0;
   z-index: 100;
   border-bottom: 1px solid rgba(130, 130, 130, 0.1);
+  transition: padding 0.3s ease; /* Adicione esta linha */
+}
+
+nav.scrolled, nav.scrolled span {
+  padding: 1rem;
+}
+nav.scrolled .nav-a {
+  display: flex;
 }
 
 nav ul {
@@ -73,6 +83,7 @@ nav a {
   border: none;
   cursor: pointer;
   font: inherit;
+  text-decoration: none;
 }
 
 nav a .material-symbols-outlined {
@@ -83,6 +94,27 @@ nav a .material-symbols-outlined {
 nav a:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
+}
+
+nav.scrolled .nav-a span {
+  display: inline;
+}
+
+nav.scrolled .nav-a span.material-symbols-outlined {
+  display: inline;
+}
+
+nav.scrolled .nav-a span:not(.material-symbols-outlined) {
+  display: none;
+}
+
+nav a span {
+  display: inline-block;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+nav.scrolled .nav-a span:not(.material-symbols-outlined) {
+  animation: fadeOut 0.3s ease forwards;
 }
 
 /* Conteúdo principal */
@@ -135,7 +167,7 @@ nav a:hover {
 }
 
 footer {
-  background-color: #161616;
+  background-color: var(--footer-background);
   padding: 1.5rem;
   text-align: center;
   font-size: 0.875rem;
@@ -143,11 +175,34 @@ footer {
 }
 
 footer a {
-  color: #a4a4a4;
+  font-weight: bold;
+  color: #595959;
 }
 
 body.dark-mode {
   --background-color: #0F0F0F;
   --text-color: #ffffff;
   --link-color: #8ab4f8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(10px);
+  }
 }

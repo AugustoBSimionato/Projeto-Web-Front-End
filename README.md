@@ -15,10 +15,6 @@ ODS 7 (Energia limpa e acessível) - 7.1 Até 2030, assegurar o acesso universal
 
 # Estrutura do Projeto
 
-Este documento descreve a estrutura do projeto e a função de cada pasta e arquivo.
-
-## Estrutura de Pastas e Arquivos
-
 - **css/**: Contém arquivos de estilo para o projeto.
   - **index.css**: Arquivo de estilos principal, aplicado à página inicial.
   - **register.css**: Arquivo de estilos específicos para a página de registro.

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +12,10 @@
   <nav>
     <ul>
       <li class="logo"><img src="/figs/watts.png" alt=""></li>
-      <li><a href="#"><span class="material-symbols-outlined">home</span>Home</a></li>
-      <li><a href="#"><span class="material-symbols-outlined">flag</span>Nosso propósito</a></li>
-      <li><a href="/pages/register.html"><span class="material-symbols-outlined">new_releases</span>Quero receber alertas!</a></li>
+      <li><a class="nav-a" href="index.html"><span class="material-symbols-outlined">home</span><span>Home</span></a></li>
+      <li><a class="nav-a" href="#"><span class="material-symbols-outlined">psychiatry</span><span>Nosso propósito</span></a></li>
+      <li><a class="nav-a" href="/pages/plans.html"><span class="material-symbols-outlined">view_cozy</span><span>Planos</span></a></li>
+      <li><a class="nav-a" href="/pages/register.html"><span class="material-symbols-outlined">new_releases</span><span>Quero receber alertas!</span></a></li>
     </ul>
   </nav>
 
@@ -47,7 +48,18 @@
 
   <footer>
     <p>Desenvolvido por <a href="https://www.threads.net/@gutobaroni" target="_blank" rel="noopener noreferrer">@gutobaroni</a></p>
-    <p>&copy; 2024 Nascer do Sol. Todos os direitos reservados.</p>
+    <p>&copy; 2024 Watts. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
