@@ -11,7 +11,7 @@
 ODS 7 (Energia limpa e acessível) - 7.1 Até 2030, assegurar o acesso universal, confiável, moderno e a preços acessíveis a serviços de energia
 
 ## Descrição do projeto
-- Projeto para uma empresa fictícia da área de energia renovável que faz projetos sociais para ajudar a diminuir o valor da conta de energia por meio do desenvolvimento de placas solares acessíveis. Também possui um cadastro para receber avisos de qual bandeira tarifária está em vigor no cep usado na hora do cadastro.
+- Projeto para uma empresa fictícia da área de energia renovável que faz projetos sociais para ajudar a diminuir o valor da conta de energia por meio do desenvolvimento de placas solares acessíveis. Também possui um cadastro para receber avisos de qual bandeira tarifária está em vigor no cep usado na hora do cadastro e venda de planos para usar fazendas solares para abater no custo final da conta de energia.
 
 # Estrutura do Projeto
 

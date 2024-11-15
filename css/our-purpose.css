@@ -118,77 +118,6 @@ nav.scrolled .nav-a span:not(.material-symbols-outlined) {
     animation: fadeOut 0.3s ease forwards;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 5rem);
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-}
-
-.plans-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 2rem;
-    margin-top: 2rem;
-    color: var(--text-color);
-}
-
-.plan {
-    border: 1px solid rgba(172, 172, 172, 0.2);
-    background-color: var(--background-color);
-    padding: 2.5rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 40px rgba(62, 62, 62, 0.2);
-    padding: 2rem;
-    flex: 1;
-    margin: 1rem;
-    max-width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    animation: fadeIn 0.3s ease-in;
-}
-
-.plan h2 {
-    margin-bottom: 1rem;
-}
-
-.plan h2 .material-symbols-outlined,
-.plan ul li .material-symbols-outlined {
-    vertical-align: middle;
-    margin-right: 0.5rem;
-}
-
-.plan ul {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 1rem;
-    flex-grow: 1;
-}
-
-.plan ul li {
-    position: relative;
-    margin-bottom: 0.5rem;
-}
-
-.plan button {
-    padding: 0.5rem;
-    border: 1px solid rgba(147, 147, 147, 0.2);
-    border-radius: 6px;
-    background-color: var(--text-color);
-    color: var(--background-color);
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    align-self: flex-end;
-}
-
 footer {
     background-color: var(--footer-background);
     padding: 0.35rem;
@@ -212,7 +141,7 @@ footer a {
         transform: translateY(0);
     }
 }
-  
+
 @keyframes fadeOut {
     from {
         opacity: 1;
