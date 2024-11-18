@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --footer-background: #f6f6f6;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #0F0F0F;
+        --text-color: #ffffff;
+        --footer-background: #161616;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--background-color, #0f0f0f);
+    font-family: Arial, sans-serif;
+    color: var(--text-color, #ffffff);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav {
+    padding: 2rem;
+    background-color: rgba(var(--background-color), 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(130, 130, 130, 0.1);
+    transition: padding 0.3s ease;
+}
+
+nav.scrolled, nav.scrolled span {
+    padding: 1rem;
+}
+
+nav.scrolled .nav-a {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav .logo {
+    margin-right: auto;
+}
+
+nav .logo img {
+    width: 50px;
+    height: auto;
+    border-radius: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    text-decoration: none;
+}
+
+nav a .material-symbols-outlined {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+nav.scrolled .nav-a span {
+    display: inline;
+}
+
+nav.scrolled .nav-a span.material-symbols-outlined {
+    display: inline;
+}
+
+nav.scrolled .nav-a span:not(.material-symbols-outlined) {
+    display: none;
+}
+
+nav a span {
+    display: inline-block;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+nav.scrolled .nav-a span:not(.material-symbols-outlined) {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 5rem;
+}
+
+.register-form {
+    border: 1px solid rgba(172, 172, 172, 0.2);
+    background-color: var(--background-color);
+    padding: 2.5rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 40px rgba(62, 62, 62, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.register-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    border: 1px solid rgba(147, 147, 147, 0.2);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(147, 147, 147, 0.2);
+    border-radius: 8px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+}
+
+.info-message {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 0.85rem;
+    padding-top: 1.5rem;
+}
+
+.info-message .material-symbols-outlined {
+    padding: 0px;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+footer {
+    background-color: var(--footer-background);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+footer a {
+    font-weight: bold;
+    color: #595959;
+}
+
+@media (max-width: 480px) {
+    .register-form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+            opacity: 0;
+            transform: translateX(10px);
+    }
+    to {
+            opacity: 1;
+            transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+            opacity: 1;
+            transform: translateY(0);
+    }
+    to {
+            opacity: 0;
+            transform: translateX(10px);
+    }
+}
