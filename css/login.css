@@ -239,3 +239,82 @@ footer a {
             transform: translateX(10px);
     }
 }
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.popup-content {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 40px rgba(62, 62, 62, 0.2);
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.popup-content .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.popup-content .form-group input {
+    margin-right: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    border: 1px solid rgba(147, 147, 147, 0.2);
+    width: 250px;
+}
+
+.popup-content .form-group button {
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid rgba(147, 147, 147, 0.2);
+    transition: all 0.3s ease;
+}
+
+.popup-content .form-group button:hover {
+    transform: translateY(-3px);
+}
+
+.popup-content p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.popup-content p .material-symbols-outlined {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.popup-content p span {
+    font-weight: bold;
+    padding-left: 0.3rem;
+}
