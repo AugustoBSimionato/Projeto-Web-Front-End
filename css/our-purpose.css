@@ -10,6 +10,8 @@
     --background-color: #ffffff;
     --text-color: #000000;
     --footer-background: #f6f6f6;
+    --primary-color: #4CAF50;
+    --secondary-color: #8BC34A;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,9 +24,11 @@
 
 body {
     background-color: var(--background-color);
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    color: var(--text-color);
+    padding-top: 80px; /* Adjust for fixed nav */
 }
 
 a {
@@ -118,6 +122,26 @@ nav.scrolled .nav-a span:not(.material-symbols-outlined) {
     animation: fadeOut 0.3s ease forwards;
 }
 
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+section p {
+    font-size: 1.125rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
 footer {
     background-color: var(--footer-background);
     padding: 0.35rem;
@@ -150,5 +174,16 @@ footer a {
     to {
         opacity: 0;
         transform: translateX(10px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
