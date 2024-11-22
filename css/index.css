@@ -254,6 +254,46 @@ nav.scrolled .nav-a span:not(.material-symbols-outlined) {
   color: #b2b2b2;
 }
 
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.contact-content {
+  width: 100%;
+}
+
+.contact-content h2 {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.35rem;
+}
+
+.contact-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+  color: var(--text-color);
+}
+
 footer {
   background-color: var(--footer-background);
   padding: 1.5rem;
@@ -265,12 +305,6 @@ footer {
 footer a {
   font-weight: bold;
   color: #595959;
-}
-
-body.dark-mode {
-  --background-color: #0F0F0F;
-  --text-color: #ffffff;
-  --link-color: #8ab4f8;
 }
 
 @keyframes fadeIn {
