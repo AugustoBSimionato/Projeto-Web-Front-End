@@ -1,225 +1,238 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --footer-background: #f6f6f6;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --footer-background: #f6f6f6;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #0F0F0F;
-        --text-color: #ffffff;
-        --footer-background: #161616;
-    }
+  :root {
+    --background-color: #0f0f0f;
+    --text-color: #ffffff;
+    --footer-background: #161616;
+  }
 }
 
 body {
-    background-color: var(--background-color);
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 a {
-    color: var(--link-color);
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 nav {
-    padding: 2rem;
-    background-color: rgba(var(--background-color), 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: var(--text-color);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid rgba(130, 130, 130, 0.1);
-    transition: padding 0.3s ease;
+  padding: 2rem;
+  background-color: rgba(var(--background-color), 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(130, 130, 130, 0.1);
+  transition: padding 0.3s ease;
 }
 
-nav.scrolled, nav.scrolled span {
-    padding: 1rem;
+nav.scrolled,
+nav.scrolled span {
+  padding: 1rem;
 }
 
 nav.scrolled .nav-a {
-    display: flex;
+  display: flex;
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
 }
 
 nav .logo {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 nav .logo img {
-    width: 50px;
-    height: auto;
-    border-radius: 0;
+  width: 50px;
+  height: auto;
+  border-radius: 0;
 }
 
 nav li {
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 
 nav a {
-    display: flex;
-    align-items: center;
-    color: var(--text-color);
-    background: none;
-    border: none;
-    cursor: pointer;
-    font: inherit;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
 }
 
 nav a .material-symbols-outlined {
-    margin-right: 0.5rem;
-    font-size: 1.5rem;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
 }
 
 nav a:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
 }
 
 nav.scrolled .nav-a span {
-    display: inline;
+  display: inline;
 }
 
 nav.scrolled .nav-a span.material-symbols-outlined {
-    display: inline;
+  display: inline;
 }
 
 nav.scrolled .nav-a span:not(.material-symbols-outlined) {
-    display: none;
+  display: none;
 }
 
 nav a span {
-    display: inline-block;
-    animation: fadeIn 0.3s ease forwards;
+  display: inline-block;
+  animation: fadeIn 0.3s ease forwards;
 }
 
 nav.scrolled .nav-a span:not(.material-symbols-outlined) {
-    animation: fadeOut 0.3s ease forwards;
+  animation: fadeOut 0.3s ease forwards;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 5rem);
-    padding-top: 5rem;
-    padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 5rem);
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
 .plans-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 2rem;
-    margin-top: 2rem;
-    color: var(--text-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 2rem;
+  color: var(--text-color);
 }
 
 .plan {
-    border: 1px solid rgba(172, 172, 172, 0.2);
-    background-color: var(--background-color);
-    padding: 2.5rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 40px rgba(62, 62, 62, 0.2);
-    padding: 2rem;
-    flex: 1;
-    margin: 1rem;
-    max-width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    animation: fadeIn 0.3s ease-in;
+  border: 1px solid rgba(172, 172, 172, 0.2);
+  background-color: var(--background-color);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 40px rgba(62, 62, 62, 0.2);
+  padding: 2rem;
+  flex: 1;
+  margin: 1rem;
+  max-width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeIn 0.3s ease-in;
 }
 
 .plan h2 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .plan h2 .material-symbols-outlined,
 .plan ul li .material-symbols-outlined {
-    vertical-align: middle;
-    margin-right: 0.5rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 .plan ul {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 1rem;
-    flex-grow: 1;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  flex-grow: 1;
 }
 
 .plan ul li {
-    position: relative;
-    margin-bottom: 0.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
 }
 
 .plan button {
-    padding: 0.5rem;
-    border: 1px solid rgba(147, 147, 147, 0.2);
-    border-radius: 6px;
-    background-color: var(--text-color);
-    color: var(--background-color);
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    align-self: flex-end;
+  padding: 0.5rem;
+  border: 1px solid rgba(147, 147, 147, 0.2);
+  border-radius: 6px;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-end;
 }
 
 footer {
-    background-color: var(--footer-background);
-    padding: 0.35rem;
-    text-align: center;
-    font-size: 0.875rem;
-    color: #666;
+  background-color: var(--footer-background);
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 footer a {
-    font-weight: bold;
-    color: #595959;
+  font-weight: bold;
+  color: #595959;
+}
+
+footer .threads-logo {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-  
+
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(10px);
-    }
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(10px);
+  }
 }
