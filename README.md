@@ -30,7 +30,7 @@ ODS 7 (Energia limpa e acessível) - 7.1 Até 2030, assegurar o acesso universal
   - **plans.html**: Página que descreve os planos oferecidos pela empresa.
   - **register.html**: Página de registro, onde os usuários podem se inscrever no sistema.
 
-- **index.html**: P��gina inicial do site.
+- **index.html**: Página inicial do site.
 
 - **.gitattributes**: Arquivo de configuração do Git para definir atributos específicos do repositório.
 
