@@ -120,7 +120,7 @@ nav.scrolled .nav-a span:not(.material-symbols-outlined) {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding-top: 6.5rem;
+  padding-top: 5.5rem;
 }
 
 .content-wrapper {
@@ -157,7 +157,7 @@ nav.scrolled .nav-a span:not(.material-symbols-outlined) {
 }
 
 .register-form {
-  padding: 2.5rem;
+  padding: 2rem;
   width: 100%;
   max-width: 400px;
 }
