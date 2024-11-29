@@ -160,6 +160,27 @@ nav.scrolled .nav-a span:not(.material-symbols-outlined) {
   animation: slideUp 1s ease-out 0.5s forwards;
 }
 
+.hero h1 span {
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+h1:hover .letter-w {
+  color: #FFD400;
+}
+
+h1:hover .letter-a {
+  color: #62FF00;
+}
+
+h1:hover .letter-t1 {
+  color: #FF2222;
+}
+
+h1:hover .letter-t2 {
+  color: #00FFAE;
+}
+
 .hero p {
   color: #b2b2b2;
   font-size: 1.25rem;
@@ -190,6 +211,7 @@ nav.scrolled .nav-a span:not(.material-symbols-outlined) {
   align-items: center;
   padding: 2rem;
   text-align: left;
+  height: 50vh;
 }
 
 .about-container {
