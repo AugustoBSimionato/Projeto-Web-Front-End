@@ -43,7 +43,7 @@
                     <div class="form-group">
                         <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirme a Senha" pattern=".{6,}" title="Repita a senha para confirmá-la (mínimo 6 caracteres)" minlength="6" required>
                     </div>
-                    <button type="submit" class="submit-btn" id="register-btn">Criar conta</button>
+                    <input type="submit" class="submit-btn" id="register-btn" value="Criar conta" onclick="window.location.href='login.html';">
 
                     <div class="info-message">
                         <span class="material-symbols-outlined">info</span>
@@ -68,11 +68,6 @@
           } else {
               nav.classList.remove('scrolled');
           }
-      });
-
-      document.querySelector('.register-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-          window.location.href = '/Projeto-Web-Front-End/pages/login.html';
       });
     </script>
 </body>
