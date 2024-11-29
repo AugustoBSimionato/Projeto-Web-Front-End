@@ -10,6 +10,7 @@
   --background-color: #ffffff;
   --text-color: #000000;
   --footer-background: #f6f6f6;
+  --glow-shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +18,7 @@
     --background-color: #0f0f0f;
     --text-color: #ffffff;
     --footer-background: #161616;
+    --glow-shadow-color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -127,19 +129,59 @@ nav.scrolled .nav-a span:not(.material-symbols-outlined) {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero img {
+  width: auto;
+  height: 100px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
 }
 
 .hero h1 {
   color: var(--text-color);
   font-size: 2.5rem;
   padding-bottom: 0.5rem;
+  opacity: 0;
+  animation: slideUp 1s ease-out 0.5s forwards;
 }
 
 .hero p {
   color: #b2b2b2;
   font-size: 1.25rem;
   margin-bottom: 1rem;
+  opacity: 0;
+  animation: slideUp 1s ease-out 1s forwards;
+}
+
+.glow {
+  color: #fff;
+  text-shadow: 0 0 5px var(--glow-shadow-color), 0 0 10px var(--glow-shadow-color), 0 0 15px var(--glow-shadow-color), 0 0 20px var(--glow-shadow-color), 0 0 25px var(--glow-shadow-color), 0 0 30px var(--glow-shadow-color), 0 0 35px var(--glow-shadow-color);
+  animation: glow 1.5s infinite alternate;
+  animation-delay: 2s;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px var(--glow-shadow-color), 0 0 10px var(--glow-shadow-color), 0 0 15px var(--glow-shadow-color), 0 0 20px var(--glow-shadow-color), 0 0 25px var(--glow-shadow-color), 0 0 30px var(--glow-shadow-color), 0 0 35px var(--glow-shadow-color);
+  }
+  to {
+    text-shadow: 0 0 10px var(--glow-shadow-color), 0 0 20px var(--glow-shadow-color), 0 0 30px var(--glow-shadow-color), 0 0 40px var(--glow-shadow-color), 0 0 50px var(--glow-shadow-color), 0 0 60px var(--glow-shadow-color), 0 0 70px var(--glow-shadow-color);
+  }
 }
 
 .about {
