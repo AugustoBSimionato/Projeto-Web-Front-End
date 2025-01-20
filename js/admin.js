@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   userList.addEventListener("click", function (e) {
-    if (e.target.classList.contains("delete")) {
+    // Change this line to match the delete-btn class
+    if (e.target.classList.contains("delete-btn")) {
       const index = e.target.dataset.index;
       deleteUser(index);
       displayUsers();
