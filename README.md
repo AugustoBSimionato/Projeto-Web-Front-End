@@ -24,6 +24,14 @@ ODS 7 (Energia limpa e acessível) - 7.1 Até 2030, assegurar o acesso universal
 
 - **figs/**: Pasta que armazena imagens e ícones usados no projeto.
 
+- **js/**: Contém arquivos JavaScript para o projeto.
+  - **index.js**: Script para a página inicial.
+  - **login.js**: Script para a página de login.
+  - **our-purpose.js**: Script para a página de nossos propósitos.
+  - **plans.js**: Script para a página de planos.
+  - **register.js**: Script para a página de registro.
+  - **admin.js**: Script para a página de administração.
+
 - **pages/**: Contém os arquivos HTML das páginas principais do site.
   - **login.html**: Página de login, onde os usuários podem acessar suas contas.
   - **our-purpose.html**: Página que descreve os propósitos da empresa.
